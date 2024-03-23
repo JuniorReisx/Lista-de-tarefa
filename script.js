@@ -1,25 +1,22 @@
-const botao = document.getElementById("enviar")
 
+const send = document.getElementById("send")
 
-botao.addEventListener('click', ()=>{
+const Sessao = document.getElementById("divs")
 
-  let input = document.getElementById("input").value
-  
-   tarefas(input)
-   document.getElementById("input").value = "";
-
+send.addEventListener('click', ()=>{
+    const valor = document.getElementById("input").value
+    appear(valor)
+    document.getElementById("input").value = "";
 })
 
-let i = 0
+function appear(valor){
+    const paragrafo = document.createElement("p")
+    const div = document.createElement("div")
+    div.className = "lista"; // Corrected this line
 
-function tarefas(input){
-   const divs = document.getElementById("divs")
-   
-   let Div = document.createElement("div")
-   Div.className = "Tarefas";
-   Div.innerHTML = `<h3> Tarefa de N${i  + 1 }</h3> 
-                <p> Tarefa:${input}</p>   `
-i++
-    divs.appendChild(Div)
-    
+    paragrafo.innerHTML = valor
+    div.appendChild(paragrafo)
+   Sessao.appendChild(div)
+
 }
+

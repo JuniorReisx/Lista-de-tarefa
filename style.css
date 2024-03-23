@@ -1,125 +1,102 @@
 *{
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-body {
- 
-  background-color:#f0f0f0;
-}
-header h1{
-  text-align: center;
-  color: #000;
-  padding: 15px;
-}
-header{
-  border-bottom: #000000 solid 1px;
-  background-color:white;
- 
-}
-
-
-div{
-  background-color: white;
-  padding: 20px;
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: #000000 solid 1px;
-
-}
-#principal{
-  width: 100%;
-  height: 500px;
-  border: #000000 solid 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-input{
-  width: 100%;
-  margin: 20px;
-  font-size: 20px;
-  padding: 5px;
-  height: 50px;
-  border-radius: 7px;
-}
-
-
-main{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: 0;
+  box-sizing: border-box;
   
 }
 
-
-.codepen-button {
-  display: block;
-  cursor: pointer;
-  color: white;
-  margin: 0 auto;
-  position: relative;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  overflow: hidden;
-  padding: 3px;
-  isolation: isolate;
+header{
+  padding: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: #00FF00;
 }
-
-.codepen-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 400%;
-  height: 100%;
-  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
-  background-size: 25% 100%;
-  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
-  animation-play-state: paused;
-  translate: -5% 0%;
-  transition: translate 0.25s ease-out;
-}
-
-.codepen-button:hover::before {
-  animation-play-state: running;
-  transition-duration: 0.75s;
-  translate: 0% 0%;
-}
-
-@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
-  to {
-    transform: translateX(-25%);
-  }
-}
-
-.codepen-button span {
-  position: relative;
-  display: block;
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  background: #000;
-  border-radius: 3px;
-  height: 100%;
+#principal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #divs{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.Tarefas{
-  margin: 10px;
+#start{
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ gap: 30px;
+}
+body{
+  background-color: #121214;
+  color: #f0f0f0;
+}
 
+.lista{
+    border: solid #f0f0f0 1px;
+    height: auto;
+    width: 500px;
+    padding: 40px;
+    margin: 5px auto;
 }
+button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+    border: 1px solid #00FF00;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #00FF00;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #00FF00;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   button:hover::before {
+    width: 105%;
+   }
+   
+   button:hover {
+    color: #111;
+   }
+   .input {
+    background-color: #212121;
+    max-width: 190px;
+    height: 40px;
+    padding: 10px;
+    /* text-align: center; */
+    border: 2px solid #00FF00;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+  }
+  
+  .input:focus {
+    color: #00FF00;
+    background-color: #212121;
+    outline-color: #00FF00;
+    box-shadow: -3px -3px 15px #00FF00;
+    transition: .1s;
+    transition-property: box-shadow;
+  }
